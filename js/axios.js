@@ -1,6 +1,6 @@
 'use strict';
 console.log('axios.js file was loaded');
-const url = 'https://jsonplaceholder.typicode.com/users111';
+const url = 'https://jsonplaceholder.typicode.com/users';
 
 fetch(url)
   .then((resp) => {
