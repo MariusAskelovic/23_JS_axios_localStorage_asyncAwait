@@ -33,8 +33,14 @@ async function fetchUsersA() {
 }
 fetchUsersA();
 
-// async function fetchPosts() {
-//   console.log('posts ===', ats);
-// }
+async function fetchPosts() {
+  try {
+    const respPosts = await fetch(urlPosts);
+    const ats = await respPosts.json();
+    console.log('posts ===', ats);
+  } catch (error) {
+    console.log('FETCH await ivyko klaida: ', error);
+  }
+}
 
-// fetchPosts();
+fetchPosts();
